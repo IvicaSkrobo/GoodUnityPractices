@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SliderScene.unity
+    guid: b2211c65b005a0f4e80b2e48f804bbd8
+  - enabled: 1
+    path: Assets/Scenes/DragAndDrop 2d Sprites.unity
+    guid: c548ca41db17c2c4e826d8fe8fdead24
   m_configObjects: {}
