@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3840308527018422621}
   - component: {fileID: 6405416009186012521}
-  - component: {fileID: -1447521857807795081}
   - component: {fileID: 9086986062463985535}
   m_Layer: 0
   m_Name: Tile
@@ -87,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1447521857807795081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660835689169822371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1aac44752c23f4cab5476d07e401a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalColor: {r: 0.34723997, g: 0.6981132, b: 0.18111429, a: 1}
-  offsetColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
-  highlight: {fileID: 2062243828933434111}
 --- !u!61 &9086986062463985535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +123,7 @@ GameObject:
   - component: {fileID: 62933209768238466}
   - component: {fileID: 6072917121875192807}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

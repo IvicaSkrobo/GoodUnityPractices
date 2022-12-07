@@ -7,14 +7,14 @@ public class GameManager : MonoBehaviour
 {
 
 
-    public static GameManager instance;
+    public static GameManager Instance;
     public static event Action<GameState> OnGameStateChanged;
 
     public GameState currentGameState;
     // Start is called before the first frame update
     void Awake()
     {
-        instance = this;
+        Instance = this;
         currentGameState = GameState.MenuState;
     }
 
