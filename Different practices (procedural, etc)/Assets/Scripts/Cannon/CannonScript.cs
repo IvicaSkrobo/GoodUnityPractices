@@ -29,15 +29,12 @@ public class CannonScript : MonoBehaviour
         var mousePos2 = Helpers.Camera.ScreenToWorldPoint(mousePos);
 
         // works splendidly
-        var transformPosOnlyY = transform.position;
-        transformPosOnlyY.x = 0;
-        transformPosOnlyY.z = 0;
+        var transformPosWithoutZ = transform.position;
+     
+        transformPosWithoutZ.z = 0;
 
 
-       
    
-      transform.up = Vector3.MoveTowards(transform.up, mousePos2- transformPosOnlyY, speedRotation * Time.deltaTime);
-
 
     }
 
