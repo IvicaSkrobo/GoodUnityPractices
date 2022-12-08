@@ -6,16 +6,18 @@ using UnityEngine.InputSystem;
 public class Cannon : MonoBehaviour {
     [SerializeField] private Ball _ballPrefab;
 
-    [SerializeField] private Transform _ballSpawn;
+    [SerializeField] private Transform ballspawn;
 
-    [SerializeField] private float _velocity = 10;
+
+    [SerializeField] private float force = 10;
 
  
 
 
     void OnFire()
     {
-        var ball = Instantiate(_ballPrefab, _ballSpawn.position, _ballSpawn.rotation);
-        ball.Init(_velocity);
+        var ball = Instantiate(_ballPrefab, ballspawn.position, ballspawn.rotation);
+        ball.Init(ballspawn.transform.forward * force,false);
+    
     }    
 }
