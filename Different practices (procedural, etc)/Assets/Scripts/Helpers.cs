@@ -88,4 +88,9 @@ public static class Helpers
         foreach (Transform child in t)
             Object.Destroy(child.gameObject);
     }
+
+    private static Matrix4x4 isometricMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+
+    public static Vector3 ToIsometric(Vector3 skewVector) => isometricMatrix.MultiplyPoint3x4(skewVector);
+    
 }
