@@ -46,8 +46,8 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
-
+        //Camera.main.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+        CalculateOrthSize();
 
         GridSystemGameManager.Instance.ChangeGameState(GameState.SpawnHeroes);
     }
@@ -95,11 +95,34 @@ public class GridManager : MonoBehaviour
               
                 Gizmos.DrawWireCube(new Vector3(x, y,0), new Vector3(1, 1, 0));
                 Gizmos.color = Color.black;
-
+                CalculateOrthSize();
             }
         }
 
       
             
     }
+
+    [SerializeField]
+    float boundsBuffer;
+    private void CalculateOrthSize()
+    {
+        // for tilemaps use  tilem.CompressBounds() and tilemap.localBounds;
+        var bounds = new Bounds();
+        bounds.center = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, 0);
+        bounds.size = new Vector2(width, height);
+        bounds.Expand(boundsBuffer);
+
+        var vertical = bounds.size.y;
+        var horizontal = bounds.size.x * Helpers.Camera.pixelHeight / Helpers.Camera.pixelWidth;
+
+        var size = Mathf.Max(horizontal,vertical) *0.5f;  //in orthograpic mode camera is half size
+        var center = bounds.center + new Vector3(0, 0, -10);
+
+
+        Helpers.Camera.transform.position = center;
+        Helpers.Camera.orthographicSize = size;
+    }
+
+
 }

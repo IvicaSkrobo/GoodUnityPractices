@@ -20,8 +20,7 @@ public class PlayerPlatformer2d : MonoBehaviour
     float speed = 20f;
 
     [Header("Jumps")]
-    [SerializeField]
-    float jumpForce = 10f;
+  
     [SerializeField]
     int maxjumpCount = 2;
     [SerializeField]

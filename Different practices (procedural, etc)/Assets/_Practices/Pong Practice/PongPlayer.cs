@@ -7,8 +7,7 @@ using UnityEngine.InputSystem.Users;
 
 public class PongPlayer : MonoBehaviour
 {
-    [SerializeField]
-    bool player2 = false;
+ 
     [SerializeField]
     float speed = 15f;
     Rigidbody2D rb;

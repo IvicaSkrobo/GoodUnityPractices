@@ -7,11 +7,7 @@ public class CannonScript : MonoBehaviour
 {
     Vector3 mousePos;
 
-    [Range(0,100)]
-    [SerializeField]
-    float speedRotation = 3f;
-    [SerializeField]
-    float speedMovement = 3f;
+
 
     [SerializeField]
     Transform shootFrom;
